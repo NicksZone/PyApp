@@ -7,8 +7,9 @@ class Image(UIElement): #TODO: add a imageButton later
         w, h = self.image.get_size()
         super().__init__(x, y, w, h)
 
-    def draw(self, screen): # inherited
-        pygame.draw.rect(screen, )
-    
+    def draw_self(self, screen): # inherited
+        screen.blit(self.image, (self.rect.x, self.rect.y))
+        pygame.draw.rect(screen, "black", self.rect, 2)
+
     def handle_event(self, event): # inherited
         return super().handle_event(event)
