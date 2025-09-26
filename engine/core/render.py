@@ -4,9 +4,9 @@ import pygame
 
 from typing import TYPE_CHECKING
 
-#doesn't run runtime
-if TYPE_CHECKING:
-    from manager import UiManager
+# #doesn't run runtime
+# if TYPE_CHECKING:
+#     from ..core.manager import UIManager
 
 class Render:
     def __init__(self, x =  400, y = 1500, caption = "Untitled", fps = 60):
@@ -41,7 +41,7 @@ class Render:
         #self.renderText(100, 100, "Welcome to weather app", "black")
 
         #self.renderDays(self.parent.DataReader.getWeekData())
-        #ui.draw_all() #draw all the ui on the screen
+        ui.draw_all() #draw all the ui on the screen
 
         while self.running:
             for event in pygame.event.get():
@@ -49,6 +49,7 @@ class Render:
                     self.running = False
                     
             pygame.display.flip()
+            
             
             self.clock.tick(self.fps)
         

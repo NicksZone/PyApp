@@ -9,7 +9,14 @@ class Button(UIElement): #TODO: add a imageButton later
         self.color = color
 
     def draw(self, screen): # inherited
-        pygame.draw.rect(screen, )
+        pygame.draw.rect(screen, self.color, self.rect)
+        # Optionally, draw text:
+        if self.text:
+            text_surface = self.font.render(self.text, True, (0,0,0))
+            # center text inside the button
+            text_rect = text_surface.get_rect(center=self.rect.center)
+            screen.blit(text_surface, text_rect)
+
     
     def handle_event(self, event): # inherited
         return super().handle_event(event)
