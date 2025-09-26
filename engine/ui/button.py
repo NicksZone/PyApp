@@ -1,5 +1,5 @@
 import pygame
-from uielement import UIElement
+from ..ui.uielement import UIElement
 
 class Button(UIElement): #TODO: add a imageButton later
     def __init__(self, x, y, width, height, text, font, color):

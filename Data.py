@@ -1,10 +1,7 @@
 import requests
 
 class HtmlReader:
-    def __init__(self, parent, directory):
-        #inherit parent functions
-        self.parent = parent
-
+    def __init__(self, directory):
         #define important varaiables
         self.directory = directory
 
